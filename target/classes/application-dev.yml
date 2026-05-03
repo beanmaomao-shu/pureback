@@ -1,0 +1,33 @@
+server:
+  port: 8888
+  max-http-header-size: 32MB
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # drainer.zhouqijun.cn（远程数据库地址） 换成 127.0.0.1 (本地IP)
+      url: jdbc:mysql://127.0.0.1:3306/marine_biodiv?serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+      # 本地 MySQL 的账号，一般是 root
+      username: root
+      # 你本地 MySQL 的真实密码
+      password: "123456"
+  redis:
+    # 确保 redis 指向本地
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+
+drainer:
+  data:
+    # 相对运行工作目录（在 drainer_system_back 下执行 mvn 或 IDE 工作目录设为该模块时有效）
+    base-path: excelTemp/
+
+ai:
+  openai:
+    base-url: ${AI_BASE_URL:https://api.openai.com/v1}
+    api-key: ${AI_API_KEY:}
+    model: ${AI_MODEL:gpt-4o-mini}
+    prompt: ${AI_PROMPT:请识别图中的海洋生物，只返回JSON，字段必须为chineseName、latinName、confidence(0-100数字)、description，不要返回任何额外文本。}
+    connect-timeout-ms: ${AI_CONNECT_TIMEOUT_MS:10000}
+    read-timeout-ms: ${AI_READ_TIMEOUT_MS:60000}

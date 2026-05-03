@@ -1,0 +1,37 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/marine_biodiv?serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+      username: ${DB_USERNAME:root}
+      password: ${DB_PASSWORD:}
+
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    database: ${REDIS_DB:0}
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 1ms
+        max-idle: 4
+        min-idle: 0
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+drainer:
+  data:
+    base-path: /usr/local/temp/
+
+ai:
+  openai:
+    base-url: ${AI_BASE_URL:https://api.openai.com/v1}
+    api-key: ${AI_API_KEY:}
+    model: ${AI_MODEL:gpt-4o-mini}
+    prompt: ${AI_PROMPT:请识别图中的海洋生物，只返回JSON，字段必须为chineseName、latinName、confidence(0-100数字)、description，不要返回任何额外文本。}
+    connect-timeout-ms: ${AI_CONNECT_TIMEOUT_MS:10000}
+    read-timeout-ms: ${AI_READ_TIMEOUT_MS:60000}
