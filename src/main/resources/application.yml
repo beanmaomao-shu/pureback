@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: ${PORT:8888} # 优先读取 Railway 的 PORT 变量，本地 fallback 8888
   address: 0.0.0.0
 
 spring:
@@ -12,6 +12,11 @@ spring:
     multipart:
       max-file-size: 20MB
       max-request-size: 20MB
+  datasource:
+    url: jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}/${MYSQLDATABASE}?serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: ${MYSQLUSER}
+    password: ${MYSQLPASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
   configuration:
