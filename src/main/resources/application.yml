@@ -1,3 +1,7 @@
+server:
+  port: 8888
+  address: 0.0.0.0
+
 spring:
   profiles:
     # 本地联调请用 dev（含 Redis/MySQL 配置）；生产部署可改为 prod
@@ -9,11 +13,9 @@ spring:
       max-file-size: 20MB
       max-request-size: 20MB
 
-
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
-
 
 drainer:
   threshold:
@@ -40,7 +42,6 @@ drainer:
     max-x: 300
     filter: 2
 
-
 ############## Sa-Token 配置 (文档: https://sa-token.cc) ##############
 sa-token:
   # token名称 (同时也是cookie名称)
@@ -57,5 +58,3 @@ sa-token:
   token-style: uuid
   # 是否输出操作日志
   is-log: false
-
-
