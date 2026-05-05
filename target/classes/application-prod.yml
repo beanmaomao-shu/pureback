@@ -22,10 +22,21 @@ spring:
 # mybatis-plus:
 #   configuration:
 #     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# mybatis:
+#   configuration:
+#     # 把日志实现改为 NoLoggingImpl，完全关闭SQL日志打印
+#     log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
 mybatis:
   configuration:
-    # 把日志实现改为 NoLoggingImpl，完全关闭SQL日志打印
-    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl # 完全关闭SQL日志
+
+logging:
+  level:
+    root: WARN
+    com.zhouq: INFO
+    org.springframework.web: WARN
+    org.apache.ibatis: WARN
+    java.sql: WARN
 drainer:
   data:
     base-path: /usr/local/temp/
