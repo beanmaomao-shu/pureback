@@ -21,6 +21,8 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+    # 同样关闭SQL日志
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
 
 drainer:
   threshold:

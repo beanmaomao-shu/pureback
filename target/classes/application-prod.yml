@@ -19,10 +19,13 @@ spring:
   #       max-wait: 1ms
   #       max-idle: 4
   #       min-idle: 0
-mybatis-plus:
+# mybatis-plus:
+#   configuration:
+#     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis:
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
+    # 把日志实现改为 NoLoggingImpl，完全关闭SQL日志打印
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
 drainer:
   data:
     base-path: /usr/local/temp/
