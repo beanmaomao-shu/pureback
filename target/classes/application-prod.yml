@@ -1,24 +1,24 @@
 server:
-  port: 8888
+  port: ${PORT:8080} # 优先读取 Railway 的 PORT 变量，本地 fallback 8888
+  address: 0.0.0.0
 
 spring:
   datasource:
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/marine_biodiv?serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
-      username: ${DB_USERNAME:root}
-      password: ${DB_PASSWORD:}
+    url: jdbc:mysql://mysql.railway.internal:3306/railway?serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: tPErHKsWBJJPfUJuLHJDecBWbaRnZIKD
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
-  redis:
-    host: ${REDIS_HOST:127.0.0.1}
-    port: ${REDIS_PORT:6379}
-    database: ${REDIS_DB:0}
-    jedis:
-      pool:
-        max-active: 8
-        max-wait: 1ms
-        max-idle: 4
-        min-idle: 0
+  # redis:
+  #   host: ${REDIS_HOST:127.0.0.1}
+  #   port: ${REDIS_PORT:6379}
+  #   database: ${REDIS_DB:0}
+  #   jedis:
+  #     pool:
+  #       max-active: 8
+  #       max-wait: 1ms
+  #       max-idle: 4
+  #       min-idle: 0
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

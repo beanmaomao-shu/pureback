@@ -1,19 +1,26 @@
+server:
+  port: ${PORT:8080} # 优先读取 Railway 的 PORT 变量，本地 fallback 8888
+  address: 0.0.0.0
+
 spring:
   profiles:
     # 本地联调请用 dev（含 Redis/MySQL 配置）；生产部署可改为 prod
-    active: dev
+    active: prod
   aop:
     proxy-target-class: true
   servlet:
     multipart:
       max-file-size: 20MB
       max-request-size: 20MB
-
+  datasource:
+    url: jdbc:mysql://mysql.railway.internal:3306/railway?serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    username: root
+    password: tPErHKsWBJJPfUJuLHJDecBWbaRnZIKD
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
-
 
 drainer:
   threshold:
@@ -40,7 +47,6 @@ drainer:
     max-x: 300
     filter: 2
 
-
 ############## Sa-Token 配置 (文档: https://sa-token.cc) ##############
 sa-token:
   # token名称 (同时也是cookie名称)
@@ -57,5 +63,3 @@ sa-token:
   token-style: uuid
   # 是否输出操作日志
   is-log: false
-
-
