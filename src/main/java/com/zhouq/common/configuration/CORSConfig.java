@@ -23,8 +23,10 @@ public class CORSConfig {
                 log.info("初始化 跨域配置");
                 registry.addMapping("/**")
                         .allowedHeaders("*")
-                        .allowedOrigins("*")
-                        .allowedMethods("*");
+                        .allowedOriginPatterns("*")  // 这里改了！支持 Vercel
+                        .allowedMethods("*")
+                        .allowCredentials(true)       // 必须加！
+                        .maxAge(3600);
             }
         };
     }
