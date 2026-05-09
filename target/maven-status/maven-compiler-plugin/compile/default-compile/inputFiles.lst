@@ -1,105 +1,82 @@
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\aop\AlarmHistoryAspect.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\chartsData\core\Legend.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\StatusServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\PO\AlarmEquipment.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\constant\Constants.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\enums\UserEnum.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\controller\StatusController.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\login\PasswordErrorException.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\AlarmTypeVO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\UserEquipmentMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\data\IDataGetService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\myConfig\SaTokenConfigure.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DTO\AlarmEquipmentCountDTO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\EquipmentDataMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\IAlarmTypeService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\chartsData\PHChartsData.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\IStatusService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\AlarmType.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\AlarmTypeServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\Alarm.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\data\IDataAddService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\configuration\MybatisPlusConfig.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\Utils\RedisUtils.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\Utils\Excel.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\Utils\AsciiUtils.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\EquipmentVO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\constant\RedisConstant.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\enums\DataExceptionEnums.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\handler\GlobalExceptionHandler.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DTO\EquipmentCountDTO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\IEquipmentStatusChangeService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\redis\RedisCache.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\EquipmentDataVO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\IUserEquipmentService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\configuration\RedisConfig.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\Utils\ExcelUtils.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\IAlarmService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\result\CodeMsg.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\IUserService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\data\DataGetServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\controller\RoleController.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\BO\AlarmList.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\chartsData\core\XAxis.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\UserMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\RoleServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\controller\EquipmentController.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\configuration\WebMvcConfig.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DTO\EquipmentDTO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\data\DataAddServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\controller\EquipmentDataController.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\PO\AlarmPO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\excel\EquipmentDataExcel.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\AlarmServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\myConfig\StpInterfaceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\EquipmentServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\UserEquipmentServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\controller\EquipmentStatusChangeController.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\handler\MyMetaObjectHandler.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\RoleMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DTO\EquipmentDataDTO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\AlarmVO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\IEquipmentService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\handler\LoginExceptionHandler.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\enums\LoginExceptionEnums.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\chartsData\core\Series.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\EquipmentMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\GlobalException.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\configuration\WebMvcConfiguration.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\Utils\RedisData.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\BO\EquipmentList.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\aop\DataSaveAop.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\configuration\CORSConfig.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\Generator.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\enums\StatusEnum.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\handler\DataExceptionHandler.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\myConfig\ThresholdConfig.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\ThresholdException.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\Equipment.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\EquipmentStatusChange.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DTO\AlarmNowDTO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\EquipmentStatusChangeServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\AlarmMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\controller\AlarmController.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\result\Result.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\Role.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\configuration\JacksonObjectMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\controller\AdministratorController.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\Status.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\User.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\EquipmentStatusChangeMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\DataException.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\UserEquipment.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\UserVO.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\inter\IRoleService.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\service\impl\UserServiceImpl.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\DB\EquipmentData.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\StatusMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\exception\handler\ThresholdExceptionHandler.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\enums\AlarmTypeEnum.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\entity\VO\chartsData\core\BaseChartsData.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\mapper\AlarmTypeMapper.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\myConfig\DataConfig.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\Application.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\Utils\TokenUtils.java
-C:\Users\zhouq\Downloads\hrm-master (1)\hrm-master\drainer_system_back\src\main\java\com\zhouq\common\Utils\RandomUtils.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DTO\PasswordUpdateDTO.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\SysLogServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\ObservationSpeciesController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\UserController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\UserServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\IPermissionService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DTO\LoginDTO.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\SpeciesController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\RoleMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\SysLog.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\RoleController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\configuration\WebMvcConfiguration.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\Ecosystem.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\myConfig\StpInterfaceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\SysLogController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\exception\GlobalException.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\RolePermission.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\PermissionServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\RolePermissionMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\SysLogMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DTO\ObservationDTO.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\SpeciesMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\User.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\Permission.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\VO\UserVO.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\configuration\WebMvcConfig.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\Utils\RedisUtils.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\PermissionMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\IObservationService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\exception\GlobalExceptionHandler.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\IEcosystemService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\Application.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\RoleServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\Utils\AsciiUtils.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\IRolePermissionService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\ObservationSpecies.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\Role.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\Species.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\Utils\ExcelUtils.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\ObservationSpeciesMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\EcosystemServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\configuration\MarineBiodivDataSeeder.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DTO\RegisterDTO.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DTO\UserUpdateDTO.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\ObservationMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\RolePermissionController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\Utils\RedisData.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\ObservationServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\configuration\JacksonObjectMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\ISpeciesService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\ObservationSpeciesServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\result\Result.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DB\Observation.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\SpeciesServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\result\CodeMsg.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\entity\DTO\SpeciesQueryDTO.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\IAiService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\IObservationSpeciesService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\RolePermissionServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\Utils\Excel.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\DashboardController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\EcosystemMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\impl\AiServiceImpl.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\Utils\RandomUtils.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\constant\RedisConstant.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\mapper\UserMapper.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\configuration\MyMetaObjectHandler.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\IRoleService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\Utils\TokenUtils.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\AiController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\PermissionController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\ObservationController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\IUserService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\myConfig\SaTokenConfigure.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\service\ISysLogService.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\configuration\RedisConfig.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\configuration\MybatisPlusConfig.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\controller\EcosystemController.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\constant\Constants.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\redis\RedisCache.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\configuration\CORSConfig.java
+D:\project\new\drainer_system_back\src\main\java\com\zhouq\common\Generator.java

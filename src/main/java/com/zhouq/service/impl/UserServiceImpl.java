@@ -117,8 +117,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         // 3. BCrypt 密码加密存储
         user.setPassword(BCrypt.hashpw(registerDTO.getPassword(), BCrypt.gensalt()));
 
-        // 4. 业务规则：如果是 学生(3) 或 公众(4)，状态默认设为 0 (待审核)
-        if (registerDTO.getRoleId() != null && (registerDTO.getRoleId() == 3 || registerDTO.getRoleId() == 4)) {
+        // 4. 业务规则：如果是科研人员(2)或学生(3)，状态默认设为 0 (待审核)
+        // 公众(4) 默认状态为 1 (正常，免审核)
+        if (registerDTO.getRoleId() != null && (registerDTO.getRoleId() == 2 || registerDTO.getRoleId() == 3)) {
             user.setStatus(0);
         } else {
             user.setStatus(1);

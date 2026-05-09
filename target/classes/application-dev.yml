@@ -7,11 +7,14 @@ spring:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
       # drainer.zhouqijun.cn（远程数据库地址） 换成 127.0.0.1 (本地IP)
-      url: jdbc:mysql://127.0.0.1:3306/marine_biodiv?serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+      # url: jdbc:mysql://127.0.0.1:3306/marine_biodiv?serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
       # 本地 MySQL 的账号，一般是 root
-      username: root
+      # username: root
       # 你本地 MySQL 的真实密码
-      password: "123456"
+      # password: "123456"
+      url: jdbc:mysql://tramway.proxy.rlwy.net:32453/railway
+      username: root
+      password: tPErHKsWBJJPfUJuLHJDecBWbaRnZIKD
   redis:
     # 确保 redis 指向本地
     host: 127.0.0.1

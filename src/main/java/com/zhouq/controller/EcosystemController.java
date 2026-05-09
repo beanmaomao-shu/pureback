@@ -2,11 +2,15 @@ package com.zhouq.controller;
 
 import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.dev33.satoken.annotation.SaMode;
+import cn.dev33.satoken.stp.StpUtil;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhouq.common.result.Result;
 import com.zhouq.entity.DB.Ecosystem;
+import com.zhouq.entity.DB.SysLog;
 import com.zhouq.service.IEcosystemService;
+import com.zhouq.service.ISysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +29,9 @@ public class EcosystemController {
 
     @Autowired
     private IEcosystemService ecosystemService;
+
+    @Autowired
+    private ISysLogService sysLogService;
 
     /**
      * 分页查询生态系统 (所有人可看)
@@ -64,7 +71,18 @@ public class EcosystemController {
     @PostMapping("/add")
     @SaCheckRole(value = {"admin", "researcher"}, mode = SaMode.OR)
     public Result add(@RequestBody Ecosystem ecosystem) {
-        ecosystemService.save(ecosystem);
+        boolean saved = ecosystemService.save(ecosystem);
+        if (saved) {
+            SysLog sysLog = new SysLog();
+            try {
+                sysLog.setUserId(StpUtil.getLoginIdAsLong());
+            } catch (Exception e) {
+                sysLog.setUserId(0L);
+            }
+            sysLog.setOperation("新增生态系统");
+            sysLog.setContent("新增生态系统: [" + ecosystem.getName() + "]");
+            sysLogService.save(sysLog);
+        }
         return Result.success("生态系统新增成功");
     }
 
@@ -74,7 +92,18 @@ public class EcosystemController {
     @PutMapping("/update")
     @SaCheckRole(value = {"admin", "researcher"}, mode = SaMode.OR)
     public Result update(@RequestBody Ecosystem ecosystem) {
-        ecosystemService.updateById(ecosystem);
+        boolean updated = ecosystemService.updateById(ecosystem);
+        if (updated) {
+            SysLog sysLog = new SysLog();
+            try {
+                sysLog.setUserId(StpUtil.getLoginIdAsLong());
+            } catch (Exception e) {
+                sysLog.setUserId(0L);
+            }
+            sysLog.setOperation("修改生态系统");
+            sysLog.setContent("修改生态系统信息: [" + ecosystem.getName() + "]");
+            sysLogService.save(sysLog);
+        }
         return Result.success("生态系统修改成功");
     }
 

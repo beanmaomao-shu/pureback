@@ -5,7 +5,8 @@ server:
 spring:
   profiles:
     # 本地联调请用 dev（含 Redis/MySQL 配置）；生产部署可改为 prod
-    active: prod
+    # active: prod
+    active: dev
   aop:
     proxy-target-class: true
   servlet:

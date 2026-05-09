@@ -1,15 +1,19 @@
 package com.zhouq.controller;
 
+import cn.dev33.satoken.annotation.SaCheckPermission;
 import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.dev33.satoken.annotation.SaMode;
 import cn.dev33.satoken.stp.StpUtil;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhouq.common.result.Result;
 import com.zhouq.entity.DB.Observation;
 import com.zhouq.entity.DB.ObservationSpecies;
+import com.zhouq.entity.DB.SysLog;
 import com.zhouq.entity.DTO.ObservationDTO;
 import com.zhouq.service.IObservationService;
+import com.zhouq.service.ISysLogService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -32,10 +36,14 @@ public class ObservationController {
     @Autowired
     private IObservationService observationService;
 
+    @Autowired
+    private ISysLogService sysLogService;
+
     /**
      * 分页查询观测记录
      */
     @GetMapping("/page")
+    @SaCheckPermission(value = {"data:view:all", "data:filter"}, mode = SaMode.OR)
     public Result page(@RequestParam(defaultValue = "1") Integer page,
                        @RequestParam(defaultValue = "10") Integer size,
                        @RequestParam(required = false) Long ecosystemId,
@@ -58,6 +66,7 @@ public class ObservationController {
      * 获取观测记录详情 (包含关联的物种)
      */
     @GetMapping("/{id}")
+    @SaCheckPermission(value = {"data:view:all", "data:filter", "data:filter:basic"}, mode = SaMode.OR)
     public Result getDetail(@PathVariable Long id) {
         Observation observation = observationService.getById(id);
         if (observation == null) {
@@ -87,6 +96,17 @@ public class ObservationController {
         observation.setCreatorId(StpUtil.getLoginIdAsLong());
         
         observationService.saveObservationWithSpecies(observation, dto.getSpeciesList());
+
+        SysLog sysLog = new SysLog();
+        try {
+            sysLog.setUserId(StpUtil.getLoginIdAsLong());
+        } catch (Exception e) {
+            sysLog.setUserId(0L);
+        }
+        sysLog.setOperation("新增观测记录");
+        sysLog.setContent("新增观测记录");
+        sysLogService.save(sysLog);
+
         return Result.success("观测记录创建成功");
     }
 
@@ -100,6 +120,17 @@ public class ObservationController {
         BeanUtils.copyProperties(dto, observation);
         
         observationService.updateObservationWithSpecies(observation, dto.getSpeciesList());
+
+        SysLog sysLog = new SysLog();
+        try {
+            sysLog.setUserId(StpUtil.getLoginIdAsLong());
+        } catch (Exception e) {
+            sysLog.setUserId(0L);
+        }
+        sysLog.setOperation("修改观测记录");
+        sysLog.setContent("修改观测记录 [ID: " + dto.getId() + "]");
+        sysLogService.save(sysLog);
+
         return Result.success("观测记录修改成功");
     }
 

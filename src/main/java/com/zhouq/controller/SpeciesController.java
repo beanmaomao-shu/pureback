@@ -1,13 +1,18 @@
 package com.zhouq.controller;
 
+import cn.dev33.satoken.annotation.SaCheckPermission;
 import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.dev33.satoken.annotation.SaMode;
+import cn.dev33.satoken.stp.StpUtil;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhouq.common.result.Result;
 import com.zhouq.entity.DB.Species;
+import com.zhouq.entity.DB.SysLog;
 import com.zhouq.entity.DTO.SpeciesQueryDTO;
 import com.zhouq.service.ISpeciesService;
+import com.zhouq.service.ISysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -31,14 +36,18 @@ public class SpeciesController {
     @Autowired
     private ISpeciesService speciesService;
 
+    @Autowired
+    private ISysLogService sysLogService;
+
     // ==========================================
     // 权限控制（基于角色控制其对数据增删改查的权限）
     // ==========================================
 
     /**
-     * 1. 任何人（包含学生、公众）登录后都可以查看物种列表
+     * 1. 具有物种查询相关权限的人可以查看物种列表
      */
     @GetMapping("/list")
+    @SaCheckPermission(value = {"data:view:all", "species:view:public"}, mode = SaMode.OR)
     public Result list() {
         return Result.success("查询成功", speciesService.list());
     }
@@ -80,6 +89,17 @@ public class SpeciesController {
     @SaCheckRole(value = {"admin", "researcher"}, mode = SaMode.OR)
     public Result add(@RequestBody Species species) {
         boolean saved = speciesService.save(species);
+        if (saved) {
+            SysLog sysLog = new SysLog();
+            try {
+                sysLog.setUserId(StpUtil.getLoginIdAsLong());
+            } catch (Exception e) {
+                sysLog.setUserId(0L);
+            }
+            sysLog.setOperation("新增物种");
+            sysLog.setContent("新增物种: [" + species.getChineseName() + "]");
+            sysLogService.save(sysLog);
+        }
         return saved ? Result.success("物种新增成功") : new Result(500, "物种新增失败", false);
     }
 
@@ -90,6 +110,17 @@ public class SpeciesController {
     @SaCheckRole(value = {"admin", "researcher"}, mode = SaMode.OR)
     public Result update(@RequestBody Species species) {
         boolean updated = speciesService.updateById(species);
+        if (updated) {
+            SysLog sysLog = new SysLog();
+            try {
+                sysLog.setUserId(StpUtil.getLoginIdAsLong());
+            } catch (Exception e) {
+                sysLog.setUserId(0L);
+            }
+            sysLog.setOperation("修改物种");
+            sysLog.setContent("修改物种信息: [" + species.getChineseName() + "]");
+            sysLogService.save(sysLog);
+        }
         return updated ? Result.success("物种修改成功") : new Result(500, "物种修改失败", false);
     }
 

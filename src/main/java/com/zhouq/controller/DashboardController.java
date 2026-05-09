@@ -1,5 +1,7 @@
 package com.zhouq.controller;
 
+import cn.dev33.satoken.annotation.SaCheckPermission;
+import cn.dev33.satoken.annotation.SaMode;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.zhouq.common.result.Result;
 import com.zhouq.entity.DB.Observation;
@@ -32,6 +34,10 @@ public class DashboardController {
     private IEcosystemService ecosystemService;
 
     @GetMapping("/overview")
+    @SaCheckPermission(
+        value = {"dashboard:view:all", "dashboard:view:research", "dashboard:view:public", "dashboard:view:basic"},
+        mode = SaMode.OR
+    )
     public Result overview() {
         Map<String, Object> data = new HashMap<>();
         // 1. 系统概览数据
