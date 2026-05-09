@@ -15,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+
 /**
  * <p>
  * 生态系统表 前端控制器
@@ -71,6 +73,7 @@ public class EcosystemController {
     @PostMapping("/add")
     @SaCheckRole(value = {"admin", "researcher"}, mode = SaMode.OR)
     public Result add(@RequestBody Ecosystem ecosystem) {
+        ecosystem.setCreateTime(LocalDateTime.now());
         boolean saved = ecosystemService.save(ecosystem);
         if (saved) {
             SysLog sysLog = new SysLog();

@@ -18,6 +18,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -88,6 +89,8 @@ public class SpeciesController {
     @PostMapping("/add")
     @SaCheckRole(value = {"admin", "researcher"}, mode = SaMode.OR)
     public Result add(@RequestBody Species species) {
+        species.setCreateTime(LocalDateTime.now());
+        species.setUpdateTime(LocalDateTime.now());
         boolean saved = speciesService.save(species);
         if (saved) {
             SysLog sysLog = new SysLog();
@@ -109,6 +112,7 @@ public class SpeciesController {
     @PutMapping("/update")
     @SaCheckRole(value = {"admin", "researcher"}, mode = SaMode.OR)
     public Result update(@RequestBody Species species) {
+        species.setUpdateTime(LocalDateTime.now());
         boolean updated = speciesService.updateById(species);
         if (updated) {
             SysLog sysLog = new SysLog();

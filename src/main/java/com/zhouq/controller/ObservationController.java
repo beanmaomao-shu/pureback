@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -94,6 +95,7 @@ public class ObservationController {
         BeanUtils.copyProperties(dto, observation);
         // 记录创建人
         observation.setCreatorId(StpUtil.getLoginIdAsLong());
+        observation.setCreateTime(LocalDateTime.now());
         
         observationService.saveObservationWithSpecies(observation, dto.getSpeciesList());
 
