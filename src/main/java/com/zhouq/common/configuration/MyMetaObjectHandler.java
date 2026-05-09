@@ -6,3 +6,17 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+@Component
+public class MyMetaObjectHandler implements MetaObjectHandler {
+// 修改正确时间
+    @Override
+    public void insertFill(MetaObject metaObject) {
+        this.strictInsertFill(metaObject, "createTime", LocalDateTime.class, LocalDateTime.now());
+        this.strictInsertFill(metaObject, "updateTime", LocalDateTime.class, LocalDateTime.now());
+    }
+
+    @Override
+    public void updateFill(MetaObject metaObject) {
+        this.strictUpdateFill(metaObject, "updateTime", LocalDateTime.class, LocalDateTime.now());
+    }
+}
