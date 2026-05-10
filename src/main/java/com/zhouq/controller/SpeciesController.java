@@ -49,6 +49,7 @@ public class SpeciesController {
      */
     @GetMapping("/list")
     @SaCheckPermission(value = {"data:view:all", "species:view:public"}, mode = SaMode.OR)
+    // 返回所有物种表信息
     public Result list() {
         return Result.success("查询成功", speciesService.list());
     }
